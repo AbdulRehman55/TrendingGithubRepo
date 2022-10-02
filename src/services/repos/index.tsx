@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Octokit } from 'octokit'
 
 const octokit = new Octokit({
-    auth: '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',
+    auth: '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',
 })
 
 async function getTrendingRepos(): Promise<any> {
