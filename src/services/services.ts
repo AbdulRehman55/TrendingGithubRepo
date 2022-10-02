@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// export const URL = 'https://'
+export const URL = 'https://api.github.com'
 
 interface ApiProps {
     path?: string

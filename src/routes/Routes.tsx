@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import * as React from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
-import { Box } from '@mui/material'
 
 import Home from '../pages/Home/Home'
 import NotFound from '../pages/NotFound/NotFound'

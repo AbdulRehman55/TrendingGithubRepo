@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import { Box, Typography } from '@mui/material'
-import { getTredingRepos } from '../../services/repos'
+import { getTrendingRepos } from '../../services/repos'
 
 export default function Home(): JSX.Element {
     const columns: GridColDef[] = [
@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
     const [rows, setRows] = useState([{ id: 0, name: '', url: '' }])
 
     async function getData(): Promise<any> {
-        const response = await getTredingRepos()
+        const response = await getTrendingRepos()
         setRows(response)
     }
 
