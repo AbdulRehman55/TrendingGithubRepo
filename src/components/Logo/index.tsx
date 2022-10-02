@@ -1,11 +1,12 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import LogoIcon from '../../img/Logo.png'
+import * as React from 'react'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
+import { JsxAttribute } from 'typescript'
 
 export default function Logo(): JSX.Element {
     return (
-        <Box sx={{ pt: 1, pl: 2 }}>
-            <img src={LogoIcon} alt="Logo" />
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <CircularProgress />
         </Box>
     )
 }

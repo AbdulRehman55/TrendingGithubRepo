@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import { Box, Typography } from '@mui/material'
 import { getTrendingRepos } from '../../services/repos'
+import Logo from '../../components/Logo'
 
 export default function Home(): JSX.Element {
     const columns: GridColDef[] = [
@@ -10,10 +11,12 @@ export default function Home(): JSX.Element {
         { field: 'url', width: 300 },
     ]
     const [rows, setRows] = useState([{ id: 0, name: '', url: '' }])
+    const [loader, setLoader] = useState(true)
 
     async function getData(): Promise<any> {
         const response = await getTrendingRepos()
         setRows(response)
+        setLoader(false)
     }
 
     useEffect(() => {
@@ -30,6 +33,7 @@ export default function Home(): JSX.Element {
             >
                 Current Trending Github Repositories
             </Typography>
+            {loader && <Logo />}
             <Box
                 style={{ height: 400, width: '100%' }}
                 display="flex"
