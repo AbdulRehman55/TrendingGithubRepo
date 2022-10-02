@@ -13,6 +13,7 @@
         "@mui/types": "^7.1.0",
         "@types/react": "latest",
         "@types/react-dom": "latest",
+        "axios": "^0.27.2",
         "chart.js": "^3.5.1",
         "date-fns": "^2.25.0",
         "firebase": "^9.6.1",
