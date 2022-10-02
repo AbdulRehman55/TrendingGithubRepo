@@ -39,13 +39,15 @@ export default function Home(): JSX.Element {
                 display="flex"
                 justifyContent="center"
             >
-                <DataGrid
-                    getRowId={(row) => row.id}
-                    columns={columns}
-                    rows={rows}
-                    pageSize={10}
-                    rowsPerPageOptions={[10]}
-                />
+                {!loader && (
+                    <DataGrid
+                        getRowId={(row) => row.id}
+                        columns={columns}
+                        rows={rows}
+                        pageSize={10}
+                        rowsPerPageOptions={[10]}
+                    />
+                )}
             </Box>
         </Box>
     )
